@@ -1,0 +1,17 @@
+<%= form_with(model: @user, local: true) do |form| %>
+    <p>
+        <%= form.label :username %> <br><br>
+        <%= form.text_field :username %>
+    </p>
+    <p>
+        <%= form.label :email %> <br><br>
+        <%= form.text_field :email %>
+    </p>
+    <p>
+        <%= form.label :password %> <br><br>
+        <%= form.text_field :password %>
+    </p>
+    <p>
+        <%= form.submit(@user.new_record? ? "Sign Up" : "Update") %>
+    </p>
+<%end%>
